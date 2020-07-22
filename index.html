@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BootstrapDash Wizard</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bd-wizard.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/images/dinho.jpg" alt="logo"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="d-flex align-items-center">
+    <div class="container">
+        <div id="wizard">
+          <h3>Caja</h3>
+          <section>
+           <h5 class="bd-wizard-step-title">Paso 1</h5>
+           <h2 class="section-heading">Selecciona tu caja </h2>
+          <div>
+            <p> <h3>Selecciona la medida de tu caja </h3></p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioMedida" id="radioMedida1" value="chica" checked>
+              <label class="form-check-label" for="Chica">
+                Chica (20cm x 20cm)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioMedida" id="radioMedida2" value="mediana">
+              <label class="form-check-label" for="Mediana">
+                Mediana (25cm x 25cm)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioMedida" id="radioMedida3" value="grande">
+              <label class="form-check-label" for="Grande">
+                Grande (30cm x 30cm)
+              </label>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <p><h3>Selecciona el modelo de tu caja</h3></p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioModelo" id="radioModelo1" value="cerrada" checked>
+              <label class="form-check-label" for="radioModelo">
+                Cerrada
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioModelo" id="radioModelo2" value="huacal">
+              <label class="form-check-label" for="exampleRadios2">
+                Huacal
+              </label>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <p><h3>Selecciona el color de tu caja</h3></p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioColor" id="radioColor1" value="rosa" checked>
+              <label class="form-check-label" for="Rosa">
+                Rosa
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioColor" id="radioColor2" value="azul">
+              <label class="form-check-label" for="Azul">
+                Azul
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radioColor" id="radioColor3" value="cafe">
+              <label class="form-check-label" for="Cafe">
+                Cafe
+              </label>
+            </div>
+          </div>          
+          </section>
+
+          <h3>Base</h3>
+          <section>
+              <h5 class="bd-wizard-step-title">Paso 2</h5>
+              <h2 class="section-heading">Selecciona tu base</h2>
+              <div>
+                <p> <h3>Selecciona la base de relleno de tu caja </h3></p>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase1" value="confetti" checked>
+                  <label class="form-check-label" for="Confetti">
+                    Confetti
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase2" value="papel">
+                  <label class="form-check-label" for="Tiras de papel picado">
+                    Tiras de papel picado
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase3" value="pasto">
+                  <label class="form-check-label" for="Pasto">
+                    Pasto
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase4" value="rafia">
+                  <label class="form-check-label" for="Rafia">
+                    Rafia
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase5" value="celofan">
+                  <label class="form-check-label" for="Celofan">
+                    Celofan
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase6" value="ninguno">
+                  <label class="form-check-label" for="Ninguno">
+                    Ninguno :(
+                  </label>
+                </div>
+              </div>
+              <hr>
+          </section>
+
+          <h3>Chocolates</h3>
+          <section>
+           <h5 class="bd-wizard-step-title">Paso 3</h5>
+           <h2 class="section-heading">Selecciona tus chocolates </h2>
+            <div>
+              <p> <h3>Selecciona los chocolates y la cantidad que quieres</h3></p>
+              <div class="row">
+                <div class="form-check col">
+                  <input class="form-check-input" type="checkbox" value="" id="Ferrero">
+                  <label class="form-check-label" for="Ferrero">
+                    Ferrero
+                  </label>
+                </div>
+                <div class="col">
+                  <select id="Ferrero_dd" class="form-control" name="dds" style="display:none">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                  </select>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="form-check col">
+                  <input class="form-check-input" type="checkbox" value="" id="KitKat">
+                  <label class="form-check-label" for="KitKat">
+                    KitKat
+                  </label>
+                </div>
+                <div class="col">
+                  <select id="KitKat_dd" class="form-control" name="dds" style="display:none">
+                    <option >1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                  </select>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="form-check col">
+                  <input class="form-check-input" type="checkbox" value="" id="Hersheys">
+                  <label class="form-check-label" for="Hersheys">
+                    Hersheys
+                  </label>
+                </div>
+                <div class="col">
+                  <select id="Hersheys_dd" class="form-control" name="dds" style="display:none">
+                    <option >1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                  </select>
+                </div>
+              </div>
+              
+            </div>
+          </section>
+
+          <h3>Flores</h3>
+          <section>
+           <h5 class="bd-wizard-step-title">Paso 1</h5>
+           <h2 class="section-heading">Selecciona tu caja </h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+           <div class="purpose-radios-wrapper">
+              <div class="purpose-radio">
+                  <input type="radio" name="purpose" id="branding" class="purpose-radio-input" value="Branding" checked>
+                 <label for="branding" class="purpose-radio-label">
+                   <span class="label-icon">
+                     <img src="assets/images/icon_branding.svg" alt="branding" class="label-icon-default">
+                     <img src="assets/images/icon_branding_green.svg" alt="branding" class="label-icon-active">
+                   </span>
+                   <span class="label-text">Branding</span>
+                 </label>
+                </div>
+                <div class="purpose-radio">
+                   <input type="radio" name="purpose" id="mobile-design" class="purpose-radio-input" value="Moile Design">
+                  <label for="mobile-design" class="purpose-radio-label">
+                    <span class="label-icon">
+                      <img src="assets/images/icon_mobile_design.svg" alt="branding" class="label-icon-default">
+                      <img src="assets/images/icon_mobile_design_green.svg" alt="branding" class="label-icon-active">
+                    </span>
+                    <span class="label-text">Moile Design</span>
+                  </label>
+                 </div>
+                 <div class="purpose-radio">
+                     <input type="radio" name="purpose" id="web-design" class="purpose-radio-input" value="Web Design">
+                    <label for="web-design" class="purpose-radio-label">
+                      <span class="label-icon">
+                        <img src="assets/images/icon_web_design.svg" alt="branding" class="label-icon-default">
+                        <img src="assets/images/icon_web_design_green.svg" alt="branding" class="label-icon-active">
+                      </span>
+                      <span class="label-text">Web Design</span>
+                    </label>
+                   </div>
+           </div>
+          </section>
+          
+
+
+        </div>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.steps.min.js"></script>
+  <script src="assets/js/bd-wizard.js"></script>
+  <script src="assets/js/myscript.js"></script>
+</body>
+</html>
