@@ -163,7 +163,7 @@
                   </label>
                 </div>
                 <div class="col">
-                  <select id="Ferrero_dd" class="form-control" name="dds" style="display:none">
+                  <select id="Ferrero_dd" class="custom-select" name="dds" style="display:none">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -182,7 +182,7 @@
                   </label>
                 </div>
                 <div class="col">
-                  <select id="KitKat_dd" class="form-control" name="dds" style="display:none">
+                  <select id="KitKat_dd" class="custom-select" name="dds" style="display:none">
                     <option >1</option>
                     <option>2</option>
                     <option>3</option>
@@ -201,7 +201,7 @@
                   </label>
                 </div>
                 <div class="col">
-                  <select id="Hersheys_dd" class="form-control" name="dds" style="display:none">
+                  <select id="Hersheys_dd" class="custom-select" name="dds" style="display:none">
                     <option >1</option>
                     <option>2</option>
                     <option>3</option>
@@ -217,45 +217,69 @@
 
           <h3>Flores</h3>
           <section>
-           <h5 class="bd-wizard-step-title">Paso 1</h5>
-           <h2 class="section-heading">Selecciona tu caja </h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-           <div class="purpose-radios-wrapper">
-              <div class="purpose-radio">
-                  <input type="radio" name="purpose" id="branding" class="purpose-radio-input" value="Branding" checked>
-                 <label for="branding" class="purpose-radio-label">
-                   <span class="label-icon">
-                     <img src="assets/images/icon_branding.svg" alt="branding" class="label-icon-default">
-                     <img src="assets/images/icon_branding_green.svg" alt="branding" class="label-icon-active">
-                   </span>
-                   <span class="label-text">Branding</span>
-                 </label>
-                </div>
-                <div class="purpose-radio">
-                   <input type="radio" name="purpose" id="mobile-design" class="purpose-radio-input" value="Moile Design">
-                  <label for="mobile-design" class="purpose-radio-label">
-                    <span class="label-icon">
-                      <img src="assets/images/icon_mobile_design.svg" alt="branding" class="label-icon-default">
-                      <img src="assets/images/icon_mobile_design_green.svg" alt="branding" class="label-icon-active">
-                    </span>
-                    <span class="label-text">Moile Design</span>
-                  </label>
+            <h5 class="bd-wizard-step-title">Paso 4</h5>
+            <h2 class="section-heading">Selecciona tus Flores </h2>
+             <div>
+               <p> <h3>Selecciona las Flores y la cantidad que quieres</h3></p>
+               <div class="row">
+                 <div class="form-check col">
+                   <input class="form-check-input" type="checkbox" value="" id="Rosas">
+                   <label class="form-check-label" for="Rosas">
+                     Rosas
+                   </label>
                  </div>
-                 <div class="purpose-radio">
-                     <input type="radio" name="purpose" id="web-design" class="purpose-radio-input" value="Web Design">
-                    <label for="web-design" class="purpose-radio-label">
-                      <span class="label-icon">
-                        <img src="assets/images/icon_web_design.svg" alt="branding" class="label-icon-default">
-                        <img src="assets/images/icon_web_design_green.svg" alt="branding" class="label-icon-active">
-                      </span>
-                      <span class="label-text">Web Design</span>
-                    </label>
-                   </div>
-           </div>
-          </section>
-          
-
-
+                 <div class="col">
+                   <select id="Rosas_dd" class="custom-select" name="dds" style="display:none">
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                     <option>6</option>
+                   </select>
+                 </div>
+               </div>
+               <hr>
+               <div class="row">
+                 <div class="form-check col">
+                   <input class="form-check-input" type="checkbox" value="" id="Girasoles">
+                   <label class="form-check-label" for="Girasoles">
+                     Girasoles
+                   </label>
+                 </div>
+                 <div class="col">
+                   <select id="Girasoles_dd" class="custom-select" name="dds" style="display:none">
+                     <option >1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                     <option>6</option>
+                   </select>
+                 </div>
+               </div>
+               <hr>
+               <div class="row">
+                 <div class="form-check col">
+                   <input class="form-check-input" type="checkbox" value="" id="Tulipanes">
+                   <label class="form-check-label" for="Tulipanes">
+                     Tulipanes
+                   </label>
+                 </div>
+                 <div class="col">
+                   <select id="Tulipanes_dd" class="custom-select" name="dds" style="display:none">
+                     <option >1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                     <option>6</option>
+                   </select>
+                 </div>
+               </div>
+               
+             </div>
+           </section>
         </div>
     </div>
   </main>
@@ -265,5 +289,6 @@
   <script src="assets/js/jquery.steps.min.js"></script>
   <script src="assets/js/bd-wizard.js"></script>
   <script src="assets/js/myscript.js"></script>
+
 </body>
 </html>

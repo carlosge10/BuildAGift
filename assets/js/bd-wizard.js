@@ -61,6 +61,4 @@ $('input[type="checkbox"]').on('change', function(e)
         console.log("not checked");
         $("#"+dd).hide();
     }
-
-
 });
