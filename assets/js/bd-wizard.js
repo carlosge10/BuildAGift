@@ -62,3 +62,18 @@ $('input[type="checkbox"]').on('change', function(e)
         $("#"+dd).hide();
     }
 });
+
+
+$('a[href="#finish"]').on('click', function(e)
+{
+    getCars();
+    getCants();
+    $('#Modal').modal('show'); 
+});
+
+
+
+
+
+
+

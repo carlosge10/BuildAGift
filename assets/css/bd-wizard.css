@@ -4,7 +4,7 @@ body {
 .navbar-light {
   border-bottom: solid 1px #e9ecf4; }
   .navbar-light .navbar-brand img {
-    height: 25px; }
+    height: 50px; }
   .navbar-light .navbar-nav .nav-link {
     padding: 30px 15px;
     font-size: 16px;
@@ -13,6 +13,7 @@ body {
 
 main {
   min-height: calc(100vh - 102px); }
+  
 
 /* Wizard */
 .wizard .audible {

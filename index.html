@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="assets/css/bd-wizard.css">
 </head>
 <body>
+
+
   <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-white">
       <div class="container">
@@ -45,19 +47,19 @@
           <div>
             <p> <h3>Selecciona la medida de tu caja </h3></p>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioMedida" id="radioMedida1" value="chica" checked>
+              <input class="form-check-input" type="radio" name="Medida" id="radioMedida" value="Chica" checked>
               <label class="form-check-label" for="Chica">
                 Chica (20cm x 20cm)
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioMedida" id="radioMedida2" value="mediana">
+              <input class="form-check-input" type="radio" name="Medida" id="radioMedida" value="Mediana">
               <label class="form-check-label" for="Mediana">
                 Mediana (25cm x 25cm)
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioMedida" id="radioMedida3" value="grande">
+              <input class="form-check-input" type="radio" name="Medida" id="radioMedida" value="Grande">
               <label class="form-check-label" for="Grande">
                 Grande (30cm x 30cm)
               </label>
@@ -67,13 +69,13 @@
           <div>
             <p><h3>Selecciona el modelo de tu caja</h3></p>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioModelo" id="radioModelo1" value="cerrada" checked>
+              <input class="form-check-input" type="radio" name="Modelo" id="radioModelo1" value="Cerrada" checked>
               <label class="form-check-label" for="radioModelo">
                 Cerrada
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioModelo" id="radioModelo2" value="huacal">
+              <input class="form-check-input" type="radio" name="Modelo" id="radioModelo2" value="Huacal">
               <label class="form-check-label" for="exampleRadios2">
                 Huacal
               </label>
@@ -83,19 +85,19 @@
           <div>
             <p><h3>Selecciona el color de tu caja</h3></p>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioColor" id="radioColor1" value="rosa" checked>
+              <input class="form-check-input" type="radio" name="Color" id="radioColor1" value="Rosa" checked>
               <label class="form-check-label" for="Rosa">
                 Rosa
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioColor" id="radioColor2" value="azul">
+              <input class="form-check-input" type="radio" name="Color" id="radioColor2" value="Azul">
               <label class="form-check-label" for="Azul">
                 Azul
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="radioColor" id="radioColor3" value="cafe">
+              <input class="form-check-input" type="radio" name="Color" id="radioColor3" value="Cafe">
               <label class="form-check-label" for="Cafe">
                 Cafe
               </label>
@@ -110,37 +112,37 @@
               <div>
                 <p> <h3>Selecciona la base de relleno de tu caja </h3></p>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase1" value="confetti" checked>
+                  <input class="form-check-input" type="radio" name="Base" id="radioBase1" value="Confetti" checked>
                   <label class="form-check-label" for="Confetti">
                     Confetti
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase2" value="papel">
+                  <input class="form-check-input" type="radio" name="Base" id="radioBase2" value="Papel">
                   <label class="form-check-label" for="Tiras de papel picado">
                     Tiras de papel picado
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase3" value="pasto">
+                  <input class="form-check-input" type="radio" name="Base" id="radioBase3" value="Pasto">
                   <label class="form-check-label" for="Pasto">
                     Pasto
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase4" value="rafia">
+                  <input class="form-check-input" type="radio" name="Base" id="radioBase4" value="Rafia">
                   <label class="form-check-label" for="Rafia">
                     Rafia
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase5" value="celofan">
+                  <input class="form-check-input" type="radio" name="Base" id="radioBase5" value="Celofan">
                   <label class="form-check-label" for="Celofan">
                     Celofan
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="radioBase" id="radioBase6" value="ninguno">
+                  <input class="form-check-input" type="radio" name="Base" id="radioBase6" value="Ninguno">
                   <label class="form-check-label" for="Ninguno">
                     Ninguno :(
                   </label>
@@ -214,7 +216,6 @@
               
             </div>
           </section>
-
           <h3>Flores</h3>
           <section>
             <h5 class="bd-wizard-step-title">Paso 4</h5>
@@ -277,11 +278,12 @@
                    </select>
                  </div>
                </div>
-               
              </div>
            </section>
-        </div>
+      </div>  
     </div>
+
+
   </main>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -289,6 +291,38 @@
   <script src="assets/js/jquery.steps.min.js"></script>
   <script src="assets/js/bd-wizard.js"></script>
   <script src="assets/js/myscript.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="modal fade" id = "Modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1>Resumen de Compra</h1>
+                </div>
+                <div class="modal-body">
+                  <h5 id = "Text">
+                  </h5>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" name = "Aceptar">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" name = "Cancelar">Close</button>
+                  <script>
+                    $('button[name="Cancelar"]').on('click', function(e)
+                    {
+                        console.log("Borrando");
+                        $('h5[id="Text"]').empty();
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
 </body>
 </html>
