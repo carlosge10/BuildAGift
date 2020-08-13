@@ -25,7 +25,7 @@ function watch() {
         server: {
             baseDir: './',
         },
-        startPath: './index.html',
+        startPath: './wizardindex.html',
         ghostMode: false,
         notify: false
     });
