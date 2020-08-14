@@ -6078,6 +6078,10 @@ button.bg-dark:focus {
   background-color: #fff !important;
 }
 
+.bg-yellow {
+  background-color: #ffb60f !important;
+}
+
 .bg-transparent {
   background-color: transparent !important;
 }
