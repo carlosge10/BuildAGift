@@ -28,6 +28,7 @@ function getCars()
            $('h5[id="Text"]').append(text + space);
 
         }
+
     });
 }
 
@@ -54,8 +55,8 @@ function getCants()
     });
 }
 
-function getDeliveryDataSummary()
-{
+
+function getDeliveryDataSummary() {
     $("input:text").each(function () {
         var text = "";
         var space = "<br>"

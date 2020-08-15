@@ -64,7 +64,7 @@ $('input[type="checkbox"]').on('change', function(e)
 });
 
 
-$('a[href="#finish"]').on('click', function(e)
+$('a[href="#finish"]').on('click', function (e)
 {
     $('h5[id="Text"]').empty();
     if (validate())
@@ -72,7 +72,7 @@ $('a[href="#finish"]').on('click', function(e)
         getCars();
         getCants();
         getDeliveryDataSummary();
-        $('#Modal').modal('show'); 
+        $('#Modal').modal('show');
     }
 });
 
