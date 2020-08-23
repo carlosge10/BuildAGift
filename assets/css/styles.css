@@ -35,7 +35,6 @@
   --font-family-sans-serif: "SB Body", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
 *,
 *::before,
 *::after {
@@ -10180,4 +10179,26 @@ form .row:first-child .floating-label-form-group {
 
 .btn-social {
   margin-bottom: 0.5rem;
+}
+
+@font-face {
+  font-family: biko;
+  src: url(../../fonts/biko/Biko_Regular.otf);
+}
+
+@font-face {
+  font-family: biko_b;
+  src: url(../../fonts/biko/Biko_Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: biko_bb;
+  src: url(../../fonts/biko/Biko_Black.otf);
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: cute_gorilla;
+  src: url(../../fonts/cute_gorilla/Cute_Gorilla.otf);
 }

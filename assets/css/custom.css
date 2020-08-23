@@ -38,3 +38,13 @@
     background-color: #FF9E1B;
     border-color: #FF9E1B;
 }
+@font-face {
+    font-family: cute_gorilla;
+    src: url(../../fonts/cute_gorilla/Cute_Gorilla.otf);
+}
+  
+.cgtitle
+{
+font-family: 'Cute Gorilla';  
+font-size: xx-large;
+}
