@@ -66,9 +66,14 @@ $('input[type="checkbox"]').on('change', function(e)
 
 $('a[href="#finish"]').on('click', function(e)
 {
-    getCars();
-    getCants();
-    $('#Modal').modal('show'); 
+    $('h5[id="Text"]').empty();
+    if (validate())
+    {
+        getCars();
+        getCants();
+        getDeliveryDataSummary();
+        $('#Modal').modal('show');
+    }
 });
 
 
