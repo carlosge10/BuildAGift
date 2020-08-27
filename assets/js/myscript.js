@@ -1,3 +1,7 @@
+var server = 
+'https://localhost:44354';
+//'http://buildyourgift.ninaserver.com';
+
 function myfun()
 {
     var radios = document.forms["formA"].elements["myradio"];
@@ -151,18 +155,19 @@ function postDelivery() {
     $.ajax({
         type: "POST",
         data: JSON.stringify(delivery),
-        url: "https://localhost:44354/api/delivery",
+        url: server + "/api/delivery",
         contentType: "application/json",
         crossDomain: true,
         headers: {
             'Access-Control-Allow-Headers': 'x-requested-with'
         },
         success: function (data) {
-            console.log("exito :)");
+            console.log("exito guardando los datos:)");
             console.log(data);
+
         },
         error: function (data) {
-            console.log("nein :(");
+            console.log("nein leyendo los datos :(");
             console.log(data);
         }
     });
@@ -205,3 +210,27 @@ function validate() {
     return true;
 }
 
+window.onload = function()
+{
+    const queryString = window.location.search;
+    console.log("qs: " + queryString);
+    if(queryString.length == 0)
+        return;
+    $.ajax({
+        type: "GET",
+        url: server + "/api/delivery" + queryString,
+        contentType: "application/json",
+        crossDomain: true,
+        headers: {
+            'Access-Control-Allow-Headers': 'x-requested-with'
+        },
+        success: function (data) {
+            console.log("exito leyendo los datos :)");
+            console.log(data);
+        },
+        error: function (data) {
+            console.log("nein leyendo los datos :(");
+            console.log(data);
+        }
+    });
+}
