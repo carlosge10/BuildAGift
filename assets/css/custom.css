@@ -48,3 +48,15 @@
 font-family: 'Cute Gorilla';  
 font-size: xx-large;
 }
+
+.cimg
+{
+    height: 100px;
+    width: 100px;
+}
+
+.wcimg
+{
+    height: 100%;
+    width: 100%;
+}

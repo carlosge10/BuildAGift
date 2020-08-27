@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BootstrapDash Wizard</title>
+  <title>BuildYourGift Wizard</title>
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -17,8 +17,12 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-yellow">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets_/img/portfolio/logo_w_y.png" alt="logo"></a>
-        <a class="navbar-brand js-scroll-trigger cgtitle" href="#page-top">BUILD YOUR GIFT</a>
+        <a class="navbar-brand js-scroll-trigger cgtitle" href="#page-top">
+            BUILD YOUR GIFT
+            <a class="navbar-brand" href="index.html">
+                <img src="assets_/img/portfolio/logo_w_y.png" alt="logo">
+            </a>
+        </a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
           aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,62 +45,31 @@
                 <h5 class="bd-wizard-step-title">Paso 1</h5>
                 <h2 class="section-heading">Selecciona tu caja </h2>
                 <div>
-                    <p> <h3>Selecciona la medida de tu caja </h3></p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Medida" id="radioMedida" value="Chica" checked>
-                        <label class="form-check-label" for="Chica">
-                            Chica (20cm x 20cm)
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Medida" id="radioMedida" value="Mediana">
-                        <label class="form-check-label" for="Mediana">
-                            Mediana (25cm x 25cm)
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Medida" id="radioMedida" value="Grande">
-                        <label class="form-check-label" for="Grande">
-                            Grande (30cm x 30cm)
-                        </label>
-                    </div>
-                </div>
-                <hr>
-                <div>
-                    <p><h3>Selecciona el modelo de tu caja</h3></p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Modelo" id="radioModelo1" value="Cerrada" checked>
-                        <label class="form-check-label" for="radioModelo">
-                            Cerrada
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Modelo" id="radioModelo2" value="Huacal">
-                        <label class="form-check-label" for="exampleRadios2">
-                            Huacal
-                        </label>
-                    </div>
-                </div>
-                <hr>
-                <div>
-                    <p><h3>Selecciona el color de tu caja</h3></p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Color" id="radioColor1" value="Rosa" checked>
-                        <label class="form-check-label" for="Rosa">
-                            Rosa
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Color" id="radioColor2" value="Azul">
-                        <label class="form-check-label" for="Azul">
-                            Azul
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Color" id="radioColor3" value="Cafe">
-                        <label class="form-check-label" for="Cafe">
-                            Cafe
-                        </label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Box" id="radioBox1" value="CorazonRosa_50Rosas" checked>
+                                    <img src="assets/images/cajas/CorazonRosa_50Rosas.jpeg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="Rosa">Corazon Rosa para 50 Rosas</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Box" id="radioBox2" value="Cerrada_12x20.5" >
+                                    <img src="assets/images/cajas/Cerrada_12x20.5.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="Rosa">Caja Cerrada 12x20.5 cm</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Box" id="radioBox3" value="Huacal18x18" >
+                                    <img src="assets/images/cajas/Huacal_18x18.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="Rosa">Huacal 18x18 cm</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -106,45 +79,74 @@
                 <h5 class="bd-wizard-step-title">Paso 2</h5>
                 <h2 class="section-heading">Selecciona tu base</h2>
                 <div>
-                    <p> <h3>Selecciona la base de relleno de tu caja </h3></p>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Base" id="radioBase1" value="Confetti" checked>
-                        <label class="form-check-label" for="Confetti">
-                            Confetti
-                        </label>
+                    <p> <h3>Selecciona la base de tu caja </h3></p>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase1" value="ChinaAzul1" checked>
+                                    <img src="assets/images/base/China_Azul1.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="ChinaAzul1">Papel China Azul tono 1</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase2" value="ChinaBlanco1" >
+                                    <img src="assets/images/base/China_Blanco1.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="ChinaBlanco1">Papel China Blanco tono 1</label>
+                            </div>    
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase3" value="ChinaMorado1" >
+                                    <img src="assets/images/base/China_Morado1.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="ChinaMorado1">Papel China Morado tono 1</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase4" value="ChinaNaranja1" >
+                                    <img src="assets/images/base/China_Naranja1.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="ChinaNaranja1">Papel China Naranja tono 1</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Base" id="radioBase2" value="Papel">
-                        <label class="form-check-label" for="Tiras de papel picado">
-                            Tiras de papel picado
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Base" id="radioBase3" value="Pasto">
-                        <label class="form-check-label" for="Pasto">
-                            Pasto
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Base" id="radioBase4" value="Rafia">
-                        <label class="form-check-label" for="Rafia">
-                            Rafia
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Base" id="radioBase5" value="Celofan">
-                        <label class="form-check-label" for="Celofan">
-                            Celofan
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Base" id="radioBase6" value="Ninguno">
-                        <label class="form-check-label" for="Ninguno">
-                            Ninguno :(
-                        </label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase5" value="ChinaRojo1" >
+                                    <img src="assets/images/base/China_Rojo1.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="ChinaRojo1">Papel China Rojo tono 1</label>
+                            </div>    
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase5" value="ChinaRosa1" >
+                                    <img src="assets/images/base/China_Rosa1.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="ChinaRosa1">Papel China Rosa tono 1</label>
+                            </div>    
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase5" value="ChinaVerde1" >
+                                    <img src="assets/images/base/China_Verde1.jpg" class="wcimg"/>
+                                </input>
+                                <label class="form-check-label" for="ChinaVerde1">Papel China Verde tono 1</label>
+                            </div>    
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Base" id="radioBase6" value="Ninguno">
+                                <label class="form-check-label" for="Ninguno"><br>Ninguna decoracion :(<br></label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr>
             </section>
 
             <h3>Chocolates</h3>
@@ -156,62 +158,74 @@
                     <div class="row">
                         <div class="form-check col">
                             <input class="form-check-input" type="checkbox" value="" id="Ferrero">
-                            <label class="form-check-label" for="Ferrero">
-                                Ferrero
-                            </label>
+                            <img src="assets/images/chocolates/Ferrero.jpg" class="cimg">
+                            <label class="form-check-label" for="Ferrero">Ferrero</label>
+                            </input>
                         </div>
                         <div class="col">
-                            <select id="Ferrero_dd" class="custom-select" name="dds" style="display:none">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
+                            <input id="Ferrero_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                        </input>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="row">
                         <div class="form-check col">
                             <input class="form-check-input" type="checkbox" value="" id="KitKat">
-                            <label class="form-check-label" for="KitKat">
-                                KitKat
-                            </label>
+                            <img src="assets/images/chocolates/Kitkat.png" class="cimg">
+                            <label class="form-check-label" for="KitKat">KitKat</label>  
+                            </input>
                         </div>
                         <div class="col">
-                            <select id="KitKat_dd" class="custom-select" name="dds" style="display:none">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
+                            <input id="KitKat_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                        </input>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="form-check col">
-                            <input class="form-check-input" type="checkbox" value="" id="Hersheys">
-                            <label class="form-check-label" for="Hersheys">
-                                Hersheys
-                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="HersheysChocolateConleche30g">
+                              <img src="assets/images/chocolates/HersheysChocolateConleche30g.jpg" class="cimg">
+                              <label class="form-check-label" for="HersheysChocolateConleche30g">Hersheys Chocolate Con leche barra 30g</label>
+                            </input>
                         </div>
                         <div class="col">
-                            <select id="Hersheys_dd" class="custom-select" name="dds" style="display:none">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
+                            <input id="HersheysChocolateConleche30g_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="HersheysCookiesNCream30g">
+                              <img src="assets/images/chocolates/HersheysCookiesNCream30g.jpeg" class="cimg">
+                              <label class="form-check-label" for="HersheysCookiesNCream30g">Hersheys Cookies N Cream barra 30g</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="HersheysCookiesNCream30g_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
                         </div>
                     </div>
-
+                    <hr>
+                    <div class="row">
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="HersheysDark40g">
+                              <img src="assets/images/chocolates/HersheysDark40g.png" class="cimg">
+                              <label class="form-check-label" for="HersheysDark40g">Hersheys Dark barra 30g</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="HersheysDark40g_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="KinderBueno">
+                              <img src="assets/images/chocolates/KinderBueno.jpg" class="cimg">
+                              <label class="form-check-label" for="KinderBueno">Kinder Bueno 2 barras</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="KinderBueno_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <h3>Flores</h3>
             <section>
                 <h5 class="bd-wizard-step-title">Paso 4</h5>
@@ -220,58 +234,161 @@
                     <p> <h3>Selecciona las Flores y la cantidad que quieres</h3></p>
                     <div class="row">
                         <div class="form-check col">
-                            <input class="form-check-input" type="checkbox" value="" id="Rosas">
-                            <label class="form-check-label" for="Rosas">
-                                Rosas
-                            </label>
-                        </div>
-                        <div class="col">
-                            <select id="Rosas_dd" class="custom-select" name="dds" style="display:none">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="form-check col">
                             <input class="form-check-input" type="checkbox" value="" id="Girasoles">
-                            <label class="form-check-label" for="Girasoles">
-                                Girasoles
-                            </label>
+                              <img src="assets/images/flores/Girasol.jpg" class="cimg">
+                              <label class="form-check-label" for="Girasoles">Girasoles</label>
+                            </input>
                         </div>
                         <div class="col">
-                            <select id="Girasoles_dd" class="custom-select" name="dds" style="display:none">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
+                            <input id="Girasoles_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaRoja">
+                              <img src="assets/images/flores/Rosa_Roja.jpg" class="cimg">
+                              <label class="form-check-label" for="RosasRoja">Rosa Roja</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaRoja_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="form-check col">
-                            <input class="form-check-input" type="checkbox" value="" id="Tulipanes">
-                            <label class="form-check-label" for="Tulipanes">
-                                Tulipanes
-                            </label>
+                            <input class="form-check-input" type="checkbox" value="" id="RosaCrema">
+                              <img src="assets/images/flores/Rosa_Crema.jpg" class="cimg">
+                              <label class="form-check-label" for="RosasCrema">Rosa Crema</label>
+                            </input>
                         </div>
                         <div class="col">
-                            <select id="Tulipanes_dd" class="custom-select" name="dds" style="display:none">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                            </select>
+                            <input id="RosaCrema_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaArcoiris">
+                              <img src="assets/images/flores/Rosa_Arcoiris.jpg" class="cimg">
+                              <label class="form-check-label" for="RosasArcoiris">Rosa Arcoiris</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaArcoiris_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaAzul">
+                              <img src="assets/images/flores/Rosa_Azul.jpg" class="cimg">
+                              <label class="form-check-label" for="RosasAzul">Rosa Azul</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaAzul_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaBlanca">
+                              <img src="assets/images/flores/Rosa_Blanca.jpg" class="cimg">
+                              <label class="form-check-label" for="RosasBlanca">Rosa Blanca</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaBlanca_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaAmarilla">
+                              <img src="assets/images/flores/Rosa_Amarilla.jpg" class="cimg">
+                              <label class="form-check-label" for="RosaAmarilla">Rosa Amarilla</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaAmarilla_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaSalmon">
+                              <img src="assets/images/flores/Rosa_Salmon.jpg" class="cimg">
+                              <label class="form-check-label" for="RosaSalmon">Rosa Salmon</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaSalmon_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="GerberaBlanca">
+                              <img src="assets/images/flores/Gerbera.jpg" class="cimg">
+                              <label class="form-check-label" for="GerberaBlanca">Gerbera Blanca</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="GerberaBlanca_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaRoja2">
+                              <img src="assets/images/flores/Rosa_Roja2.jpg" class="cimg">
+                              <label class="form-check-label" for="RosaRoja2">Rosa Roja2</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaRoja2_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="GerberaArcoiris">
+                              <img src="assets/images/flores/Gerbera_Arcoiris.JPG" class="cimg">
+                              <label class="form-check-label" for="GerberaArcoiris">Gerbera Arcoiris</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="GerberaArcoiris_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="RosaRosa2">
+                              <img src="assets/images/flores/Rosa_Rosa2.jpg" class="cimg">
+                              <label class="form-check-label" for="RosaRosa2">Rosa Rosa2</label>
+                            </input>
+                        </div>
+                        <div class="col">
+                            <input id="RosaRosa2_dd" classalgo="custom-select" name="dds" style="display:none" placeholder="0">
+                            </input>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <h3>Mensaje y Fotos</h3>
+            <section>
+                <h5 class="bd-wizard-step-title">Paso 5</h5>
+                <h2 class="section-heading">Deja un mensaje para esa persona y una foto que quieras incluir</h2>
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <label>Tu mensaje:</label>
+                            <textarea class="form-control" id="text-content" rows="3" placeholder="Querido/a ... te quiero decir que ..."></textarea>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <label>Tu Foto:</label>
+                            <br/>
+                            <input id="input-b1" name="input-b1" type="file" class="file" data-browse-on-zone-click="true">
                         </div>
                     </div>
                 </div>
@@ -279,7 +396,7 @@
 
             <h3>Datos de Contacto y Entrega</h3>
             <section>
-                <h5 class="bd-wizard-step-title">Paso 5</h5>
+                <h5 class="bd-wizard-step-title">Paso 6</h5>
                 <h2 class="section-heading">Dinos tus datos de contacto y de entrega </h2>
                 <div>
                     <p> <h3>Datos De Contacto </h3></p>
@@ -299,7 +416,7 @@
                     </div>
                 </div>
             </section>
-
+            
         </div>  
     </div>
 
