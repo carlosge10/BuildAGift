@@ -3939,7 +3939,7 @@ input[type=button].btn-block {
 .navbar .container-lg,
 .navbar .container-xl {
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   align-items: center;
   justify-content: space-between;
 }
