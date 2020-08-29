@@ -210,6 +210,24 @@ function validate() {
     return true;
 }
 
+function loadListItems(list)
+{
+    list.listItems.forEach(function (item, indice, array) {
+        $("#" + item.name.replace(/ +/g, "")).attr('checked', 'checked');
+        $("#" + item.name.replace(/ +/g, "") + "_dd").show();
+        $("#" + item.name.replace(/ +/g, "") + "_dd").val(item.quantity);
+    });
+}
+
+function loadData(data)
+{
+    
+    console.log("loading chocolates");
+    loadListItems(data.chocolates);
+    console.log("loading flowers");
+    loadListItems(data.flowers);
+}
+
 window.onload = function()
 {
     const queryString = window.location.search;
@@ -227,6 +245,8 @@ window.onload = function()
         success: function (data) {
             console.log("exito leyendo los datos :)");
             console.log(data);
+            //setTimeout(() => { loadData(data); }, 1000);
+            loadData(data); 
         },
         error: function (data) {
             console.log("nein leyendo los datos :(");
