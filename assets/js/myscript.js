@@ -6,10 +6,10 @@ function myfun()
 {
     var radios = document.forms["formA"].elements["myradio"];
     for(var i = 0, max = radios.length; i < max; i++) {
-    radios[i].onclick = function() {
-        alert(this.value);
+        radios[i].onclick = function() {
+            alert(this.value);
+        }
     }
-}
     alert($('input[name="name_of_your_radiobutton"]:checked').val());
     Console.log($('input[name="name_of_your_radiobutton"]:checked').val());
 }
@@ -37,8 +37,7 @@ function getCars()
 }
 
 function getCants()
-{
-    
+{   
     $("input:checkbox").each(function(){
         var $this = $(this);
         var id = 0;
@@ -49,7 +48,7 @@ function getCants()
         if($this.is(":checked")){
             id = $this.attr("id");
 
-            cant = $('select[id="'+id+"_dd"+'"]').val();
+            cant = $('input[id="'+id+"_dd"+'"]').val();
             console.log(id+ " : "+cant);
             text = id+ " : "+cant;
 
@@ -86,6 +85,14 @@ function getDeliveryDataSummary() {
     });
 }
 
+function getDeliveryDataSummaryEnhanced(delivery) {
+    var text = "";
+    var space = "<br>"
+    text = key + " : " + value;
+
+    $('h5[id="Text"]').append(text + space);
+}
+
 function postDelivery() {
     var today = new Date();
     today.setDate(today.getDate());
@@ -101,13 +108,13 @@ function postDelivery() {
         },
         chocolates:
         {
-            listItems: getOrderableList(["Ferrero", "KitKat", "Hersheys"]),
+            listItems: getOrderableList(["Ferrero", "KitKat", "HersheysChocolateConleche30g", "HersheysCookiesNCream30g", "HersheysDark40g", "KinderBueno"]),
             type: 0,
             typeName: "Chocolates"
         },
         flowers:
         {
-            listItems: getOrderableList(["Rosas", "Girasoles", "Tulipanes"]),
+            listItems: getOrderableList(["Girasoles", "RosaRoja", "RosaCrema", "RosaArcoiris", "RosaAzul", "RosaBlanca", "RosaAmarilla", "RosaSalmon", "GerberaBlanca", "RosaRoja2", "GerberaArcoiris", "RosaRosa2"]),
             type: 0,
             typeName: "Flowers"
         },
@@ -188,11 +195,12 @@ function getOrderableList(orderableList) {
             console.log(orderable);
             if ($('#' + orderable).is(":checked")) {
                 console.log("checked");
-                console.log($('select[id="' + orderable + "_dd" + '"]').val());
+                console.log($('input[id="' + orderable + "_dd" + '"]').val());
                 item1.id = 0;
                 item1.name = orderable;
-                item1.quantity = parseInt($('select[id="' + orderable + "_dd" + '"]').val());
-                //move listItems.push(item1) here if less wordy json is desired
+                item1.quantity = parseInt($('input[id="' + orderable + "_dd" + '"]').val());
+
+                listItems.push(item1);
             }
             else {
                 item1.id = 0;
@@ -200,7 +208,7 @@ function getOrderableList(orderableList) {
                 item1.quantity = 0;
                 console.log("not checked");
             }
-            listItems.push(item1);
+            //move listItems.push(item1) here if wordier json is desired
         }
     );
     return listItems;
@@ -220,8 +228,7 @@ function loadListItems(list)
 }
 
 function loadData(data)
-{
-    
+{    
     console.log("loading chocolates");
     loadListItems(data.chocolates);
     console.log("loading flowers");
