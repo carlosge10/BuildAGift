@@ -110,7 +110,7 @@ function getDelivery()
             type: 0,
             typeName: "Flowers"
         },
-        base:
+        bases:
         {
             listItems: getOrderableList(["Chinablanco","Chinarojo","ChinaNaranja1","ChinaNaranja2","Chinaamarillo","ChinaVerde1","ChinaVerde2","Chinaazul1","Chinaazul2","Chinamorado1","Chinamorado2","Chinarosa1","Chinarosa2","Chinarosa3"]),
             type: 0,
@@ -164,8 +164,8 @@ function getDeliveryDataSummaryEnhanced(delivery) {
     text = text + "Lugar de Entrega : " + delivery.contact.address + space;
     text = text + "Box : " + delivery.box.model.name + space;
     text = text + "Base : " + space;
-    if (delivery.base.listItems.length > 0){
-        delivery.base.listItems.forEach(function(item)
+    if (delivery.bases.listItems.length > 0){
+        delivery.bases.listItems.forEach(function(item)
         {
             text = text + tab + item.name + ": " + item.quantity + space;
         });
@@ -274,11 +274,16 @@ function loadListItems(list)
 }
 
 function loadData(data)
-{    
+{
+    console.log("loading box type");
+    $("input[value='" + data.box.model.name + "']").attr('checked', 'checked');
+    console.log("loading bases");
+    loadListItems(data.bases);
     console.log("loading chocolates");
     loadListItems(data.chocolates);
     console.log("loading flowers");
     loadListItems(data.flowers);
+
 }
 
 window.onload = function()
