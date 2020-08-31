@@ -1,4 +1,4 @@
-var server = 
+﻿var server = 
 'https://localhost:44354';
 //'http://buildyourgift.ninaserver.com';
 
@@ -154,6 +154,7 @@ function getDelivery()
 }
 
 function getDeliveryDataSummaryEnhanced(delivery) {
+
     console.log("delivery:")
     console.log(delivery);
     var text = "";
@@ -197,8 +198,9 @@ function getDeliveryDataSummaryEnhanced(delivery) {
         text = text + tab + "--SIN FLORES :(--" + space;
     }
     text = text + "Contacto : " + delivery.contact.name + space;
-    text = text + "Foto : " + delivery.photo + space;
-    text = text + "Mensaje : " + delivery.message + space;
+    text = text + "Foto : " + ((delivery.photo.length > 0) ? delivery.photo : "--SIN FOTO :(--") + space;
+    text = text + "Mensaje : " + ((delivery.message.length > 0) ? delivery.message : "--SIN MENSAJE :(--") + space;
+    $('h5[id="Text"]').empty();
     $('h5[id="Text"]').append(text + space);
 }
 
@@ -220,6 +222,8 @@ function postDelivery(delivery) {
 
         },
         error: function (data) {
+            $('h5[id="Error"]').empty();
+            $('h5[id="Error"]').append(data.message);
             console.log("nein guardando los datos :(");
             console.log(data);
         }
@@ -260,8 +264,48 @@ function getOrderableList(orderableList) {
     return listItems;
 }
 
-function validate() {
-    return true;
+function isValid() {
+    var valid = true;
+    var text = "";
+    var space = "<br>";
+    if ($("#contact_name").val().length == 0)
+    {
+        text = "<ul><li>Porfavor ingresa tu nombre para contactarte. </li></ul>";
+        $('h5[id="Errors"]').append(text);
+        valid = false;
+    }
+    if ($("#contact_phone").val().length == 0 && $("#contact_whatsapp").val().length == 0 && $("#contact_email").val().length == 0)
+    {
+        text = "<ul><li>Porfavor ingresa algun dato de contacto, entre mas, mejor.</li></ul>";
+        $('h5[id="Errors"]').append(text);
+        valid = false;
+    }
+    if ($("#delivery_address").val().length == 0)
+    {
+        text = "<ul><li>Porfavor ingresa la direccion de la entrega. </li></ul>";
+        $('h5[id="Errors"]').append(text);
+        valid = false;
+    }
+    var today = new Date();
+    today.setDate(today.getDate());
+    console.log(today);
+    var dateObject = new Date($("#delivery_dateTime").val());
+    console.log(dateObject);
+    if ($("#delivery_dateTime").val().length == 0)
+    {
+        text = "<ul><li>Porfavor ingresa una fecha de entrega. </li></ul>";
+        $('h5[id="Errors"]').append(text);
+        valid = false;
+    }
+
+    if (dateObject < today)
+    {
+        text = "<ul><li>Porfavor ingresa una fecha de entrega de hoy en adelante. </li></ul>";
+        $('h5[id="Errors"]').append(text);
+        valid = false;
+    }
+
+    return valid;
 }
 
 function loadListItems(list)
@@ -275,6 +319,8 @@ function loadListItems(list)
 
 function loadData(data)
 {
+    console.log("loading arreglo name");
+    $("#customizing").append(" el arreglo: " +data.name);
     console.log("loading box type");
     $("input[value='" + data.box.model.name + "']").attr('checked', 'checked');
     console.log("loading bases");
@@ -288,10 +334,17 @@ function loadData(data)
 
 window.onload = function()
 {
+    var today = new Date();
+    today.setDate(today.getDate() + 1);
+    $("#delivery_dateTime").val(today.toJSON().slice(0,19));
     const queryString = window.location.search;
     console.log("qs: " + queryString);
-    if(queryString.length == 0)
+    if (queryString.length == 0)
+    {
+        $("#customizing").append(" tu propio arreglo");
         return;
+    }
+
     $.ajax({
         type: "GET",
         url: server + "/api/delivery" + queryString,

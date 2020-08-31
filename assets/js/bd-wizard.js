@@ -66,20 +66,57 @@ $('input[type="checkbox"]').on('change', function(e)
 });
 
 
+$('button[name=Cancelar]').on('click', function (e) {
+    $('h5[id="Text"]').empty();
+    $('h5[id="Errors"]').empty();
+    $('h5[id="Success"]').empty();
+});
+
 $('a[href="#finish"]').on('click', function(e)
 {
     $('h5[id="Text"]').empty();
-    if (validate())
-    {
-//        getCars();
-//        getCants();
-//        getDeliveryDataSummary();
+    $('h5[id="Errors"]').empty();
+    $('h5[id="Success"]').empty();
+    if (isValid()) {
+        //        getCars();
+        //        getCants();
+        //        getDeliveryDataSummary();
         getDeliveryDataSummaryEnhanced(getDelivery());
-        $('#Modal').modal('show');
+        $("button[name=Aceptar]").show();
     }
+    else
+    {
+        $("button[name=Aceptar]").hide();
+    }
+    $('#Modal').modal('show');
 });
 
+$('button[name="Aceptar"]').on('click', function (e) {
+    console.log("Posting...");
+    postDelivery(getDelivery);
+    $('#Modal').modal('hide');
+    $('h5[id="Success"]').append("Felicidades! Te contactaremos enseguida para cotizar tu arreglo perzonalizado y darle seguimiento a tu pedido!");
+    $('#Success').modal('show');
+});
 
+$('button[name="Cancelar"]').on('click', function (e) {
+    console.log("Borrando");
+    $('h5[id="Text"]').empty();
+    $('#Modal').modal('hide');
+});
+
+$('button[name="Aceptar_"]').on('click', function (e) {
+    $('#Success').modal('hide');
+    window.location.href = "index.html";
+});
+//$("button[name=Aceptar]").on('click', function (e) {
+
+//    $('#Modal').modal('hide');
+//    $('h5[id="Text"]').empty();
+//    $('h5[id="Errors"]').empty();
+//    $('h5[id="Success"]').empty();
+//    $('#Modal').modal('show');
+//});
 
 
 
