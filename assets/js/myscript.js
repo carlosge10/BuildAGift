@@ -1,6 +1,6 @@
 ﻿var server = 
-'https://localhost:44354';
-//'http://buildyourgift.ninaserver.com';
+//'https://localhost:44354';
+'http://buildyourgift.ninaserver.com';
 
 function myfun()
 {
@@ -89,8 +89,10 @@ function getDelivery()
 {
     var today = new Date();
     today.setDate(today.getDate());
+    var nombre = $("#customizing").text();
     var delivery =
     {
+        name: nombre.replace("Estas personalizando ",""),
         id: 0,
         submittedDate: today,
         eta: $("#delivery_dateTime").val(),
@@ -150,6 +152,8 @@ function getDelivery()
         message: $("#mensaje").val(),
         price: 1000.5 
     };
+    console.log("delivery constructed:");
+    console.log(JSON.stringify(delivery));
     return delivery;
 }
 
@@ -205,8 +209,8 @@ function getDeliveryDataSummaryEnhanced(delivery) {
 }
 
 function postDelivery(delivery) {
-    //console.log("About to post:");
-    //console.log(JSON.stringify(delivery));
+    console.log("About to post:");
+    console.log(JSON.stringify(delivery));
     $.ajax({
         type: "POST",
         data: JSON.stringify(delivery),

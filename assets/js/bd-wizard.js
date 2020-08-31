@@ -93,7 +93,7 @@ $('a[href="#finish"]').on('click', function(e)
 
 $('button[name="Aceptar"]').on('click', function (e) {
     console.log("Posting...");
-    postDelivery(getDelivery);
+    postDelivery(getDelivery());
     $('#Modal').modal('hide');
     $('h5[id="Success"]').append("Felicidades! Te contactaremos enseguida para cotizar tu arreglo perzonalizado y darle seguimiento a tu pedido!");
     $('#Success').modal('show');
