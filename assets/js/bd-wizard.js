@@ -48,18 +48,20 @@ $('input[name="radioColor"]').on('change', function(e)
 $('input[type="checkbox"]').on('change', function(e)
 {
 
-    console.log($(this).attr('id'));
-    console.log(this.checked);
+    //console.log($(this).attr('id'));
+    //console.log(this.checked);
     var dd = $(this).attr('id') + "_dd";
     if(this.checked)
     {
-        console.log("checked");
+        //console.log("checked");
         $("#"+dd).show();
+        $("#"+dd).val(1);
     }
     else
     {
-        console.log("not checked");
+        //console.log("not checked");
         $("#"+dd).hide();
+        $("#"+dd).val("");
     }
 });
 
@@ -69,9 +71,10 @@ $('a[href="#finish"]').on('click', function(e)
     $('h5[id="Text"]').empty();
     if (validate())
     {
-        getCars();
-        getCants();
-        getDeliveryDataSummary();
+//        getCars();
+//        getCants();
+//        getDeliveryDataSummary();
+        getDeliveryDataSummaryEnhanced(getDelivery());
         $('#Modal').modal('show');
     }
 });
