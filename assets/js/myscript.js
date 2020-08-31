@@ -85,18 +85,10 @@ function getDeliveryDataSummary() {
     });
 }
 
-function getDeliveryDataSummaryEnhanced(delivery) {
-    var text = "";
-    var space = "<br>"
-    text = key + " : " + value;
-
-    $('h5[id="Text"]').append(text + space);
-}
-
-function postDelivery() {
+function getDelivery()
+{
     var today = new Date();
     today.setDate(today.getDate());
-
     var delivery =
     {
         id: 0,
@@ -108,40 +100,40 @@ function postDelivery() {
         },
         chocolates:
         {
-            listItems: getOrderableList(["Ferrero", "KitKat", "HersheysChocolateConleche30g", "HersheysCookiesNCream30g", "HersheysDark40g", "KinderBueno"]),
+            listItems: getOrderableList(["FerreroRocher", "Raffaellochocolate", "HersheysChocolateConleche30g", "HersheysCookiesNCream30g", "HersheysDark40g", "KinderBueno", "Kindermaxi", "Kinderchocolate", "Huevokinder", "Kinderdelice", "KitKat", "Conejos_turin", "Turin_cerezas", "Turin_baileys", "Turin_1800", "Turin_JW", "Turin_JC", "Miniaturas_herseys", "Kisses_chocolate", "Kisses_almendra", "Kisses_cookies", "Herseys_bites", "Herseys_bites_almendra", "Herseys_bites_cookies", "Mnm_natural", "Mnm_cacahuate", "Mnm_minis", "Snickers", "Milky_way", "Pelon_PP", "Pulparindo", "skwinkles"]),
             type: 0,
             typeName: "Chocolates"
         },
         flowers:
         {
-            listItems: getOrderableList(["Girasoles", "RosaRoja", "RosaCrema", "RosaArcoiris", "RosaAzul", "RosaBlanca", "RosaAmarilla", "RosaSalmon", "GerberaBlanca", "RosaRoja2", "GerberaArcoiris", "RosaRosa2"]),
+            listItems: getOrderableList(["Girasoles", "RosaRoja", "RosaCrema", "Rosa_rosado_1", "Rosa_rosado_2", "Rosa_rosado_3", "Rosa_rosado_4", "RosaAmarilla", "RosaArcoiris", "RosaBlanca", "RosaAzul", "GerberaArcoiris", "GerberaBlanca", "GerberaAmarilla", "Gerbera_Rosa", "GerberaRoja", "Solidago", "Astromelia_blanco", "Leticia_blanca", "Hortencia_blanca"]),
             type: 0,
             typeName: "Flowers"
         },
         base:
         {
-            id: 0,
-            name: $("input[name='Base']:checked").val(),
-            quantity: 1
+            listItems: getOrderableList(["Chinablanco","Chinarojo","ChinaNaranja1","ChinaNaranja2","Chinaamarillo","ChinaVerde1","ChinaVerde2","Chinaazul1","Chinaazul2","Chinamorado1","Chinamorado2","Chinarosa1","Chinarosa2","Chinarosa3"]),
+            type: 0,
+            typeName: "Base"
         },
         box:
         {
             size:
             {
                 id: 0,
-                name: $("input[name='Medida']:checked").val(),
+                name: $("input[name='Box']:checked").val(),
                 quantity: 1
             },
             model:
             {
                 id: 0,
-                name: $("input[name='Modelo']:checked").val(),
+                name: $("input[name='Box']:checked").val(),
                 quantity: 1
             },
             color:
             {
                 id: 0,
-                name: $("input[name='Color']:checked").val(),
+                name: $("input[name='Box']:checked").val(),
                 quantity: 1
             }
         },
@@ -153,12 +145,66 @@ function postDelivery() {
             phone: $("#contact_phone").val(),
             whatsapp: $("#contact_whatsapp").val(),
             address: $("#delivery_address").val()
-        }
+        },
+        photo:  $('input[type="file"]').val().replace(/C:\\fakepath\\/i, ''),
+        message: $("#mensaje").val(),
+        price: 1000.5 
     };
+    return delivery;
+}
 
+function getDeliveryDataSummaryEnhanced(delivery) {
+    console.log("delivery:")
+    console.log(delivery);
+    var text = "";
+    var space = "<br>";
+    var tab = "&nbsp;&nbsp;&nbsp;&nbsp;";
+    //text = text + "key : " + delivery.key.value + space;
+    text = text + "Fecha de Entrega : " + delivery.eta + space;
+    text = text + "Lugar de Entrega : " + delivery.contact.address + space;
+    text = text + "Box : " + delivery.box.model.name + space;
+    text = text + "Base : " + space;
+    if (delivery.base.listItems.length > 0){
+        delivery.base.listItems.forEach(function(item)
+        {
+            text = text + tab + item.name + ": " + item.quantity + space;
+        });
+    }
+    else
+    {
+        text = text + tab + "--SIN BASE :(--" + space;
+    }
+    text = text + "Chocolates : " + space;
+    if (delivery.chocolates.listItems.length > 0){
+        delivery.chocolates.listItems.forEach(function(item)
+        {
+            text = text + tab + item.name + ": " + item.quantity + space;
+        });
+    }
+    else
+    {
+        text = text + tab + "--SIN CHOCOLATES :(--" + space;
+    }
+    text = text + "Flores : " + space;
+    if (delivery.flowers.listItems.length > 0){
+        delivery.flowers.listItems.forEach(function(item)
+        {
+            text = text + tab + item.name + ": " + item.quantity + space;
+        });
+    }
+    else
+    {
+        text = text + tab + "--SIN FLORES :(--" + space;
+    }
+    text = text + "Contacto : " + delivery.contact.name + space;
+    text = text + "Foto : " + delivery.photo + space;
+    text = text + "Mensaje : " + delivery.message + space;
+    $('h5[id="Text"]').append(text + space);
+}
+
+function postDelivery(delivery) {
     //console.log("About to post:");
     //console.log(JSON.stringify(delivery));
-
     $.ajax({
         type: "POST",
         data: JSON.stringify(delivery),
@@ -174,7 +220,7 @@ function postDelivery() {
 
         },
         error: function (data) {
-            console.log("nein leyendo los datos :(");
+            console.log("nein guardando los datos :(");
             console.log(data);
         }
     });
@@ -190,23 +236,23 @@ function getOrderableList(orderableList) {
             {
                 id: 0,
                 name: "",
-                quantity: 3
+                quantity: 1
             };
-            console.log(orderable);
             if ($('#' + orderable).is(":checked")) {
-                console.log("checked");
-                console.log($('input[id="' + orderable + "_dd" + '"]').val());
+                //if input with orderable id is checked, then, we look for its input for number 
+                var e = $('input[id="' + orderable + "_dd" + '"]');
+//                console.log(e.val());
                 item1.id = 0;
                 item1.name = orderable;
-                item1.quantity = parseInt($('input[id="' + orderable + "_dd" + '"]').val());
-
+                //if input for number is there, then we can retrieve the value, other wise it is only checked and we set it to 1
+                item1.quantity = (isNaN(parseInt(e.val()))) ? 1 : parseInt(e.val());
+//                console.log(item1);
                 listItems.push(item1);
             }
             else {
                 item1.id = 0;
                 item1.name = orderable;
                 item1.quantity = 0;
-                console.log("not checked");
             }
             //move listItems.push(item1) here if wordier json is desired
         }
@@ -253,7 +299,7 @@ window.onload = function()
             console.log("exito leyendo los datos :)");
             console.log(data);
             //setTimeout(() => { loadData(data); }, 1000);
-            loadData(data); 
+            loadData(data);
         },
         error: function (data) {
             console.log("nein leyendo los datos :(");
