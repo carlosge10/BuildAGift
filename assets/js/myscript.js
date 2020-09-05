@@ -16,7 +16,6 @@ function myfun()
 
 function getCars()
 {
-
     $('input[type="radio"]').each(function(){
         var $this = $(this);
         var val = "";
@@ -32,7 +31,6 @@ function getCars()
            $('h5[id="Text"]').append(text + space);
 
         }
-
     });
 }
 
@@ -333,7 +331,8 @@ function loadData(data)
     loadListItems(data.chocolates);
     console.log("loading flowers");
     loadListItems(data.flowers);
-
+    $("#bygSpinner").css({ "display": "none" });
+    $("#bygWizard").css({ "display": "block" });
 }
 
 window.onload = function()
@@ -346,6 +345,8 @@ window.onload = function()
     if (queryString.length == 0)
     {
         $("#customizing").append(" tu propio arreglo");
+        $("#bygSpinner").css({ "display": "none" });
+        $("#bygWizard").css({ "display": "block" });
         return;
     }
 
@@ -366,6 +367,8 @@ window.onload = function()
         error: function (data) {
             console.log("nein leyendo los datos :(");
             console.log(data);
+            $("#bygSpinner").css({ "display": "none" });
+            $("#bygWizard").css({ "display": "block" });
         }
     });
 }
